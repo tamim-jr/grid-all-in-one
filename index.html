@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'product product product aside'
+                'product-next product-next product-next aside'
+                'footer footer footer footer';
+        }
+        .item {
+            border: 2px solid green;
+            background-color: yellow;
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #product {
+            grid-area: product;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .listing {
+            border: 2px solid green;
+            background-color: red;
+            height: 100px;
+        }
+        #product-next{
+            grid-area: product-next;
+            display: grid;
+            grid-gap: 1rem;
+            /* grid-template-columns: 1fr auto 1fr; */
+            grid-template-columns: 200px auto 300px;
+        }
+        #aside {
+            grid-area: aside;
+        }
+
+        #footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align: center; border: 2px solid green; background-color: yellow;">Just an example of a GRID layout</h1>
+    </header>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home | Blog | About | Contact
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit fugiat quasi magnam quo sunt iure at
+            voluptatem qui voluptatum cumque numquam omnis veniam quas ex pariatur incidunt, autem ea! Earum odit
+            accusamus optio nobis corrupti ab doloribus non, dolorem ea sed, deleniti nostrum, eveniet harum delectus
+            voluptate possimus a vitae.
+        </div>
+        <div id="product" class="item">
+            <div id="mainproduct1" class="listing">all product</div>
+            <div id="mainproduct2" class="listing">all product</div>
+            <div id="mainproduct3" class="listing">all product</div>
+            <div id="mainproduct4" class="listing">all product</div>
+            <div id="mainproduct5" class="listing">all product</div>
+            <div id="mainproduct6" class="listing">all product</div>
+            <div id="mainproduct7" class="listing">all product</div>
+            <div id="mainproduct8" class="listing">all product</div>
+            <div id="mainproduct9" class="listing">all product</div>
+            <div id="mainproduct10" class="listing">all product</div>
+            <div id="mainproduct9" class="listing">all product</div>
+            <div id="mainproduct10" class="listing">all product</div>
+        </div>
+        <div id="product-next" class="item">
+            <div id="mainproduct1" class="listing">all product</div>
+            <div id="mainproduct2" class="listing">all product</div>
+            <div id="mainproduct3" class="listing">all product</div>
+            <div id="mainproduct4" class="listing">all product</div>
+            <div id="mainproduct5" class="listing">all product</div>
+            <div id="mainproduct6" class="listing">all product</div>
+            <div id="mainproduct7" class="listing">all product</div>
+            <div id="mainproduct8" class="listing">all product</div>
+            <div id="mainproduct9" class="listing">all product</div>
+            <div id="mainproduct10" class="listing">all product</div>
+            <div id="mainproduct9" class="listing">all product</div>
+            <div id="mainproduct10" class="listing">all product</div>
+        </div>
+        <div id="aside" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex minima laudantium
+            iusto, sapiente illo asperiores voluptate ipsam impedit ab natus! Nesciunt quisquam asperiores similique
+            totam sint necessitatibus impedit error saepe officiis, porro iusto maiores sit dolor! Eligendi quis quae
+            dolores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptates doloremque asperiores maiores, quasi cumque earum consectetur nulla nostrum harum quo dignissimos mollitia tempore ut libero aut labore corporis, aperiam sed soluta accusamus suscipit. Minima, eos voluptas. Harum similique mollitia praesentium obcaecati exercitationem doloribus corrupti nulla placeat corporis veritatis illo, sint dolorem. Consequuntur modi voluptates atque laborum quasi, odit expedita minus ipsam recusandae perferendis, laudantium ad assumenda similique labore neque nihil rerum voluptate, iusto nam adipisci nostrum! Enim provident, expedita fugiat assumenda, neque impedit vitae similique animi necessitatibus voluptas in, hic eveniet amet odit rem recusandae dolores? Quas, incidunt natus!</div>
+        <div id="footer" class="item">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, repudiandae!
+        </div>
+    </div>
+</body>
+
+</html>
